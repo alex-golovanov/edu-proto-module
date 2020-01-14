@@ -1,18 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Module from "./Module/Module";
+
+import Module from "./Module/";
+import Task from "./Task/";
 
 import './normalize.css';
 import './styles.css';
-const About = () => <div>About</div>;
+const Index = () => <div>Index</div>;
 
 const App = () => (
   <Router>
       <div className="app">
         <Switch>
-          <Route exact path="/" component={Module} />
-          <Route path="/about" component={About} />
+          <Route exact path="/" component={Index} />
+          <Route path="/module/:step?" component={Module} />
+          <Route path="/task" component={Task} />
         </Switch>
       </div>
   </Router>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Route, Switch } from 'react-router-dom';
 
+import Avatar from '@material-ui/core/Avatar';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -50,7 +51,7 @@ export default function Module() {
                   <Button>Пропустить</Button>
                 </div>
                 <div className="sidenav">
-                  <IconButton><EmojiEmotionsIcon /></IconButton>
+                  <Avatar><EmojiEmotionsIcon /></Avatar>
                   <IconButton><NotificationsIcon /></IconButton>
                   <IconButton><ChatIcon /></IconButton>
                   <IconButton><SearchIcon /></IconButton>

@@ -1,0 +1,36 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+}
+
+.viewport {
+  width: 1280px;
+  height: 800px;
+  background-image: url('/module-cover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 15px hsla(0, 0%, 0%, .15);
+  align-self: center;
+  position: relative;
+  overflow: auto;
+}
+
+.header {
+  position: absolute;
+
+  background: #ccc;
+  width: 1200px;
+  height: 100px;
+}
+
+.sidenav {
+  position: absolute;
+  right: 0;
+  background: #eee;
+  width: 80px;
+  height: 800px;
+}

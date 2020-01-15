@@ -20,7 +20,7 @@ import './normalize.css'
 import './styles.css'
 
 const useStyles = makeStyles({
-  root: {
+  container: {
     width: '100vw',
     height: '100vh',
     display: 'flex',
@@ -38,7 +38,7 @@ const Index = () => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div className={classes.container}>
       <Paper className={classes.menu}>
         <MenuList>
           <MenuItem>

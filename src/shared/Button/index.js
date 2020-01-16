@@ -27,12 +27,21 @@ const CommonStyledButton = withStyles({
   }
 })(Button)
 
-export default function DefaultStyledButton(props) {
-  return (
+const PrimaryStyledButton = withStyles({
+  root: {
+    backgroundColor: '#6200EE',
+    color: 'white'
+  }
+})(CommonStyledButton)
+
+export default function StyledButton(props) {
+  return props.primary ? (
+    <PrimaryStyledButton disableRipple {...props}>
+      {props.children}
+    </PrimaryStyledButton>
+  ) : (
     <CommonStyledButton disableRipple {...props}>
       {props.children}
     </CommonStyledButton>
   )
 }
-
-// export default Button

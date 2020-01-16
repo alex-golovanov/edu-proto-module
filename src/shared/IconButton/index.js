@@ -27,7 +27,7 @@ const CommonStyledButton = withStyles({
 
 export default function DefaultStyledIconButton(props) {
   return (
-    <CommonStyledButton disableRipple size="large" {...props}>
+    <CommonStyledButton disableRipple {...props}>
       {props.children}
     </CommonStyledButton>
   )

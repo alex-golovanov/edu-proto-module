@@ -1,0 +1,40 @@
+.task__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1200;
+}
+
+.task__scroll-body {
+  opacity: 1;
+  height: 100%;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.task__data-container {
+  margin-top: calc(50vh - 200px);
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  max-width: 876px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(21, 0, 51, 0.11), 0 3px 6px rgba(21, 0, 51, 0.08);
+  border-radius: 16px;
+
+  &--scroll {
+    margin-top: 104px;
+    margin-bottom: 104px;
+  }
+}
+
+.task__clearfix {
+  display: block;
+  width: 866px;
+  height: 1599px;
+}

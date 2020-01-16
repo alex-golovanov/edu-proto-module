@@ -46,6 +46,10 @@ export const BigModuleCard = withStyles({
     '&:hover': {
       cursor: 'pointer',
       background: '#057DFF'
+    },
+    '&:active': {
+      cursor: 'pointer',
+      background: '#057DFF'
     }
   }
 })(Card)
@@ -102,6 +106,11 @@ export const useStyles = makeStyles({
     left: -38,
     '&:hover': {
       opacity: 0.72
+    }
+  },
+  link: {
+    '&:active': {
+      opacity: 0.9
     }
   }
 })

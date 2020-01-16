@@ -1,31 +1,7 @@
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  background-color: #212122
-}
-
-.overlay {
-  opacity: 0.3;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-image: url('/module-cover.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.viewport {
+.content {
   width: 800px;
   height: 730px;
-  border-radius: 10px;
-  align-self: center;
-}
 
-.content {
   position: relative;
 
   &__header-container {

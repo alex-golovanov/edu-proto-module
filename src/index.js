@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import Module from './Module'
+import ModuleOverview from './ModuleOverview'
 import TaskText from './TaskText'
 import TaskVideo from './TaskVideo'
 
@@ -17,6 +18,7 @@ const App = () => (
         <div className="viewport">
           <Switch>
             <Route exact path="/module" component={Module} />
+            <Route path="/module/overview" component={ModuleOverview} />
             <Route path="/module/task/video" component={TaskVideo} />
             <Route path="/module/task/text" component={TaskText} />
             <Redirect to="/module" />

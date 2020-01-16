@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { withStyles } from '@material-ui/styles'
 
-import styles from './styles.scss'
+import './styles.scss'
 
 const defaultStyles = {
   root: {

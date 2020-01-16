@@ -4,20 +4,20 @@ import { NavLink } from 'react-router-dom'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 
-import styles from './styles.scss'
 import Header from '../shared/Header'
 import videoCover from './assets/video-cover.png'
 import bigModuleCover from './assets/big-module-cover.png'
 import blockQuestion from './assets/block-question.png'
 
-import { TextCard, BigModuleCard, BlockQuestionCard, LikeCard, useStyles, VideoCard } from './materialStyles/styles'
+import './styles.scss'
+import { TextCard, BigModuleCard, BlockQuestionCard, LikeCard, useStyles, VideoCard } from './materialStyles'
 
 export default function Main() {
   const classes = useStyles()
 
   return (
     <>
-      <Header />
+      <Header showSkipButton />
       <div className="content">
         <div className="content__header-container header-container">
           <h1 className="header-container__welcome">Добро пожаловать в модуль</h1>

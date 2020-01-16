@@ -4,7 +4,7 @@ import Close from '@material-ui/icons/Close'
 import IconButton from '../IconButton'
 import { NavLink } from 'react-router-dom'
 
-import styles from './styles.scss'
+import './styles.scss'
 import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({

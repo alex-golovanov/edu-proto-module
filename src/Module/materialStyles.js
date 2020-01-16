@@ -1,5 +1,5 @@
 import { makeStyles, withStyles } from '@material-ui/core'
-import Card from '../../shared/Card'
+import Card from '../shared/Card'
 
 export const TextCard = withStyles({
   root: {

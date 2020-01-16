@@ -1,7 +1,10 @@
 .sidenav {
   position: absolute;
-  right: 0;
-  background: #eee;
+  top: 12px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 12px;
   width: 80px;
-  height: 800px;
 }

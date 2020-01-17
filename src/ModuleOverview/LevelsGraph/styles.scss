@@ -1,0 +1,76 @@
+.module-graph {
+  position: absolute;
+  left: 136px;
+  bottom: 150px;
+  width: calc(100vw - 272px);
+  height: 242px;
+  z-index: 2;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--vertical {
+      flex-direction: column;
+      .MuiButtonBase-root:first-child {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__level {
+    display: block;
+    margin: 6px auto 16px;
+  }
+
+  &__level-float {
+    background: #FFFFFF;
+    box-shadow: 0 3px 6px rgba(21, 0, 51, 0.11), 0 3px 6px rgba(21, 0, 51, 0.08);
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+
+    position: absolute;
+    top: 50%;
+
+    &--two {
+      left: 100px;
+      transform: translateY(-50%);
+    }
+
+    &--three {
+      left: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--four, &--fourFinal {
+      right: 100px;
+      transform: translateY(-50%)
+    }
+  }
+
+  &__description {
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #212122;
+  }
+
+}
+
+.module-graph__canvas-container {
+  z-index: 1;
+  position: absolute;
+  left: 136px;
+  bottom: 150px;
+  overflow: hidden;
+  width: calc(100vw - 272px);
+}
+
+.makeStyles-root-85 {
+  left: 100px;
+}

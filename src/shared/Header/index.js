@@ -34,9 +34,9 @@ export default memo(function({ showSkipButton }) {
         <>
           <Button startIcon={<ArrowBack fontSize="large" />}>История</Button>
           <Button
-            primary
+            appearance="primary"
             component={NavLink}
-            to="/module/overview"
+            to="/module/overview/step-1"
             startIcon={<RedoIcon />}
             className={classes.buttonPrimary}
           >

@@ -1,21 +1,30 @@
 import { makeStyles, withStyles } from '@material-ui/styles'
 import LockIcon from '@material-ui/icons/Lock'
-import Card from '../shared/Card'
+import Card from '../../shared/Card'
 
 export const CardStyled = withStyles({
-  root: {
+  root: props => ({
     width: 280,
     height: 242,
     padding: 20,
     paddingTop: 14,
-    position: 'relative'
-  }
+    position: 'absolute',
+    zIndex: 1,
+    ...props.style
+  })
 })(Card)
 
-export const LockIconStyled = withStyles({
+export const LockIconSmallStyled = withStyles({
   root: {
     color: 'rgba(0, 0, 0, 0.54)',
     fontSize: 12
+  }
+})(LockIcon)
+
+export const LockIconStandardStyled = withStyles({
+  root: {
+    color: '#FFFFFF',
+    fontSize: 24
   }
 })(LockIcon)
 

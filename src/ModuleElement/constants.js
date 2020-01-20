@@ -84,3 +84,60 @@ export const levelTwoStagesData = {
     }
   ]
 }
+
+
+export const levelTwoStagesDataDone = {
+  stage: [
+    {
+      title: 'I',
+      check: false,
+      cards: [
+        {
+          cardTitle: 'Понятие Ренессанса',
+          done: true
+        },
+        {
+          cardTitle: 'Что такое Ренессанс'
+        }
+      ]
+    },
+    {
+      title: 'II',
+      check: false,
+      cards: [
+        {
+          cardTitle: 'Мировоззрение Ренессанса'
+        },
+        {
+          cardTitle: 'Человек эпохи Возрождения',
+          done: true
+        }
+      ]
+    },
+    {
+      title: 'III',
+      check: false,
+      cards: [
+        {
+          cardTitle: 'Выдающиеся деятели эпохи Возрождения',
+          done: true
+        }
+      ]
+    },
+    {
+      title: 'Проверочные',
+      check: true,
+      cards: [
+        {
+          cardTitle: 'Эпоха Возрождения',
+          variant: 'Вариант I',
+          done: true
+        },
+        {
+          cardTitle: 'Эпоха Возрождения',
+          variant: 'Вариант II'
+        }
+      ]
+    }
+  ]
+}

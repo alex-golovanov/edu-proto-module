@@ -1,6 +1,5 @@
 .content-container {
   width: 656px;
-  height: 948px;
   padding: 20px 24px;
 }
 
@@ -14,6 +13,11 @@
   &__circle {
     position: absolute;
     top: -4px;
+    left: -4px;
+  }
+  &__color {
+    position: absolute;
+    top: 0;
     left: -4px;
   }
   &__main {
@@ -112,37 +116,5 @@
   &__container {
     display: flex;
     align-items: flex-start;
-  }
-}
-
-
-.stage-card {
-  background: #FFFFFE;
-  border: 1px solid #DADEE7;
-  box-sizing: border-box;
-  box-shadow: 0 1px 2px rgba(21, 0, 51, 0.1), 0 1px 3px rgba(21, 0, 51, 0.05);
-  border-radius: 8px;
-  padding: 12px 12px 0 12px;
-  width: 200px;
-  margin-right: 8px;
-  margin-bottom: 39px;
-  button {
-    &:not(:hover) {
-      svg {
-        fill: #6200EE;
-      }
-    }
-  }
-  &__text {
-    font-size: 15px;
-    line-height: 18px;
-    color: #212122;
-  }
-  &__variant {
-    margin-top: 8px;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.2px;
-    color: #757575;
   }
 }

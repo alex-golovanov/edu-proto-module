@@ -25,6 +25,7 @@ const App = () => (
             <Route path="/module/task/video" component={TaskVideo} />
             <Route path="/module/task/text" component={TaskText} />
             <Route exact path="/module/element/two" component={ModuleElementLevelTwo} />
+            <Route exact path="/module/element/two-done" component={ModuleElementLevelTwo} />
             <Route path="/module/element/:level?" component={ModuleElement} />
             <Route path="/module/reflection/:stage?" component={Reflection} />
             <Redirect to="/module" />

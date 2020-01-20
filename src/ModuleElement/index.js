@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { makeStyles } from '@material-ui/core'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 import './styles.scss'
 
@@ -9,8 +9,8 @@ import requiredImage from '../shared/assets/task-required.png'
 import SliderControl from '../shared/SliderControl'
 import ModalContainer from '../shared/ModalContainer'
 import { LockIconStandardStyled } from '../ModuleOverview/LevelsGraph/materialStyles'
-import { moduleElementMap } from './utils'
 import { MODULE_KEYS } from '../ModuleOverview/LevelsGraph/constants'
+import { moduleElementMap } from './constants'
 
 const useStyles = makeStyles({
   clearfix: {
@@ -38,11 +38,11 @@ export default memo(function ModuleElement() {
 
   if (!moduleToRender) moduleToRender = moduleElementMap[MODULE_KEYS.three]
 
-  const { sliderLeft, sliderRight, levelImage, description, recommendedItems } = moduleToRender
+  const { sliderLeft, sliderRight, levelImage, description, recommendedItems, taskTo } = moduleToRender
 
   return (
     <>
-      <ModalContainer>
+      <ModalContainer to="/module/overview">
         {sliderLeft && (
           <SliderControl to={sliderLeft.to} left>
             <img src={sliderLeft.image} alt="" />
@@ -55,9 +55,21 @@ export default memo(function ModuleElement() {
           <p className="module-element__warning">
             Прохождение заданий недоступно, пока ты не пройдёшь проверочный тест
           </p>
-          <Button appearance="primary" className={classes.checkButton} startIcon={<LockIconStandardStyled />}>
-            Пройти проверочное
-          </Button>
+          {taskTo ? (
+            <Button
+              component={NavLink}
+              to={taskTo}
+              appearance="primary"
+              className={classes.checkButton}
+              startIcon={<LockIconStandardStyled />}
+            >
+              Пройти проверочное
+            </Button>
+          ) : (
+            <Button appearance="primary" className={classes.checkButton} startIcon={<LockIconStandardStyled />}>
+              Пройти проверочное
+            </Button>
+          )}
           <div className="module-element__recommended">
             <h3 className="module-element__recommended-header">Рекомендуемые задания</h3>
             <ul className="module-element__recommended-list">
@@ -67,7 +79,7 @@ export default memo(function ModuleElement() {
               {level === MODULE_KEYS.four && (
                 <>
                   <span className="module-element__recommended-item-required-text">До 23 декабря</span>
-                  <img className="module-element__recommended-item-required-image" src={requiredImage} />
+                  <img className="module-element__recommended-item-required-image" src={requiredImage} alt="" />
                 </>
               )}
             </ul>

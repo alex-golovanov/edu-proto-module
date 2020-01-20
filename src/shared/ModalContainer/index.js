@@ -18,14 +18,14 @@ const useStyles = makeStyles({
   }
 })
 
-export default memo(function ModalContainer({ children, scrollable }) {
+export default memo(function ModalContainer({ children, scrollable, to = '/' }) {
   const classes = useStyles()
 
   return (
     <div className="task__container">
       <div className="task__scroll-body">
         <div className={scrollable ? 'task__data-container task__data-container--scroll' : 'task__data-container'}>
-          <NavLink to="/">
+          <NavLink to={to}>
             <IconButton className={classes.button}>
               <Close className={classes.icon} />
             </IconButton>

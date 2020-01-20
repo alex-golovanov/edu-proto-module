@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import Header from '../shared/Header'
 import SideNav from '../shared/SideNav'
@@ -11,9 +12,10 @@ import { MODULE_KEYS, MODULE_ROUTES_INVERSED } from './LevelsGraph/constants'
 
 export default memo(function ModuleOverview() {
   const [currentLevel, setCurrentLevel] = useState(MODULE_KEYS.two)
+  const location = useLocation()
 
   useEffect(() => {
-    const routeKey = window.location.pathname
+    const routeKey = location.pathname
 
     if (!MODULE_ROUTES_INVERSED[routeKey]) {
       console.warn('no card for this route exists, check passed location, fallback to /overview/step-2')
@@ -21,7 +23,7 @@ export default memo(function ModuleOverview() {
     }
 
     return setCurrentLevel(MODULE_ROUTES_INVERSED[routeKey])
-  })
+  }, [location])
 
   return (
     <>

@@ -18,6 +18,22 @@ export const CardStageOneStyled = withStyles({
 export const CardStageTwoStyled = withStyles({
   root: {
     width: 656,
-    height: 394
+    height: 394,
+    top: 140
+  }
+})(CardStageOneStyled)
+
+export const CardStageThreeStyled = withStyles({
+  root: {
+    width: 656,
+    height: 336,
+    top: 122
+  }
+})(CardStageOneStyled)
+
+export const CardStageFinalStyled = withStyles({
+  root: {
+    width: 656,
+    height: 336
   }
 })(CardStageOneStyled)

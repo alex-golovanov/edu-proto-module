@@ -1,8 +1,6 @@
 import React, { memo } from 'react'
 import { makeStyles } from '@material-ui/core'
-import { NavLink, useParams } from 'react-router-dom'
-
-import './styles.scss'
+import { useParams } from 'react-router-dom'
 
 import Button from '../shared/Button'
 import requiredImage from '../shared/assets/task-required.png'
@@ -11,6 +9,8 @@ import ModalContainer from '../shared/ModalContainer'
 import { LockIconStandardStyled } from '../ModuleOverview/LevelsGraph/materialStyles'
 import { MODULE_KEYS } from '../ModuleOverview/LevelsGraph/constants'
 import { moduleElementMap } from './constants'
+
+import './styles.scss'
 
 const useStyles = makeStyles({
   clearfix: {
@@ -38,7 +38,7 @@ export default memo(function ModuleElement() {
 
   if (!moduleToRender) moduleToRender = moduleElementMap[MODULE_KEYS.three]
 
-  const { sliderLeft, sliderRight, levelImage, description, recommendedItems, taskTo } = moduleToRender
+  const { sliderLeft, sliderRight, levelImage, description, recommendedItems } = moduleToRender
 
   return (
     <>

@@ -1,0 +1,49 @@
+
+.stage-card {
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(21, 0, 51, 0.1), 0 1px 3px rgba(21, 0, 51, 0.05);
+  border-radius: 8px;
+  padding: 12px 12px 0 12px;
+  width: 200px;
+  margin-right: 8px;
+  margin-bottom: 39px;
+  button {
+    &:not(:hover) {
+      svg {
+        fill: #6200EE;
+      }
+    }
+  }
+  &__progress {
+    background: #FFFFFE;
+    border: 1px solid #DADEE7;
+  }
+  &__done {
+    background: #DBFFCC;
+    border: 1px solid rgba(29, 179, 0, 0.28);
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    color: #212122;
+  }
+  &__variant {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #757575;
+  }
+}
+
+.stage-done-mark {
+  display: flex;
+  color: #1DB300;
+  font-size: 15px;
+  margin: 10px 0 13px 0;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+}

@@ -23,7 +23,7 @@ export default memo(function TaskText() {
   return (
     <ModalContainer scrollable>
       <div className={classes.clearfix} />
-      <img className={classes.image} src={textTaskImage} />
+      <img className={classes.image} src={textTaskImage} alt="" />
     </ModalContainer>
   )
 })

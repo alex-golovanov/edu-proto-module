@@ -6,7 +6,6 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined'
 
-import Card from '../../shared/Card'
 import Button from '../../shared/Button'
 import { NavLink } from 'react-router-dom'
 import IconButton from '../../shared/IconButton'
@@ -31,7 +30,7 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
   const secondRef = useRef(null)
   const fourthRef = useRef(null)
 
-  const isFinalState = useMemo(() => location.pathname === '/module/overview/step-final', [location])
+  const isFinalState = useMemo(() => location.pathname === '/module/overview/step-final', [location.pathname])
 
   const levelsMap = useMemo(() => {
     const params = {
@@ -40,7 +39,7 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
       withFinal: isFinalState
     }
     return getLevelsMap(params)
-  }, [location, fourthRef, secondRef])
+  }, [fourthRef, secondRef, isFinalState])
 
   const draw = useCallback(
     ctx => {

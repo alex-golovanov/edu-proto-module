@@ -10,6 +10,8 @@ import ModuleOverview from './ModuleOverview'
 import TaskText from './TaskText'
 import TaskVideo from './TaskVideo'
 
+import SlidesExample from './SlidesExample'
+
 import './normalize.css'
 import './styles.css'
 
@@ -28,6 +30,7 @@ const App = () => (
             <Route exact path="/module/element/two-done" component={ModuleElementLevelTwo} />
             <Route path="/module/element/:level?" component={ModuleElement} />
             <Route path="/module/reflection/:stage?" component={Reflection} />
+            <Route path="/slides/:taskId?/:meta?" component={SlidesExample} />
             <Redirect to="/module" />
           </Switch>
         </div>

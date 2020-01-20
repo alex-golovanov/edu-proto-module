@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/module/task/text" component={TaskText} />
             <Route exact path="/module/element/two" component={ModuleElementLevelTwo} />
             <Route path="/module/element/:level?" component={ModuleElement} />
-            <Route path="/module/reflection/:stage?" component={Reflection} />
+            <Route path="/module/reflection" component={Reflection} />
             <Redirect to="/module" />
           </Switch>
         </div>

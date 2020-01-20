@@ -24,7 +24,7 @@ export default memo(function TaskVideo() {
   return (
     <ModalContainer>
       <div className={classes.clearfix} />
-      <img src={videoTaskImage} className={classes.image} />
+      <img src={videoTaskImage} className={classes.image} alt="" />
     </ModalContainer>
   )
 })

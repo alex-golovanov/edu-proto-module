@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import Module from './Module'
+import Reflection from './Reflection'
 import ModuleElementLevelTwo from './ModuleElement/ModuleElementLevelTwo'
 import ModuleElement from './ModuleElement'
 import ModuleOverview from './ModuleOverview'
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/module/task/text" component={TaskText} />
             <Route exact path="/module/element/two" component={ModuleElementLevelTwo} />
             <Route path="/module/element/:level?" component={ModuleElement} />
+            <Route path="/module/reflection/:stage?" component={Reflection} />
             <Redirect to="/module" />
           </Switch>
         </div>

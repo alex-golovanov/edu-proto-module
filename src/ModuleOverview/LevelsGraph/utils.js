@@ -65,6 +65,10 @@ export function getLevelsMap({ secondRef, fourthRef, withFinal = false }) {
       {
         ref: fourthRef,
         image: levelFour,
+        to: {
+          graph: MODULE_ROUTES_ELEMENTS[MODULE_KEYS.fourFinal],
+          module: MODULE_ROUTES_ELEMENTS[MODULE_KEYS.fourFinal]
+        },
         description: 'Я могу назвать и характеризовать основные периоды эпохи Возрождения',
         style: {
           right: 0

@@ -55,21 +55,9 @@ export default memo(function ModuleElement() {
           <p className="module-element__warning">
             Прохождение заданий недоступно, пока ты не пройдёшь проверочный тест
           </p>
-          {taskTo ? (
-            <Button
-              component={NavLink}
-              to={taskTo}
-              appearance="primary"
-              className={classes.checkButton}
-              startIcon={<LockIconStandardStyled />}
-            >
-              Пройти проверочное
-            </Button>
-          ) : (
-            <Button appearance="primary" className={classes.checkButton} startIcon={<LockIconStandardStyled />}>
-              Пройти проверочное
-            </Button>
-          )}
+          <Button appearance="primary" className={classes.checkButton} startIcon={<LockIconStandardStyled />}>
+            Пройти проверочное
+          </Button>
           <div className="module-element__recommended">
             <h3 className="module-element__recommended-header">Рекомендуемые задания</h3>
             <ul className="module-element__recommended-list">

@@ -28,7 +28,6 @@ export const moduleElementMap = {
       to: `/module/element/${MODULE_KEYS.three}`
     },
     levelImage: levelFour,
-    taskTo: `/module/overview/step-final`,
     description: 'Я могу на конкретных примерах исследовать, как античность повлияла на эпоху Возрождения',
     recommendedItems: ['«Античность, этот забытый мир, вновь является Возрождению, как древняя сказочная птица Феникс»']
   }

@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default memo(function TaskContainer({ children, scrollable }) {
+export default memo(function ModalContainer({ children, scrollable }) {
   const classes = useStyles()
 
   return (

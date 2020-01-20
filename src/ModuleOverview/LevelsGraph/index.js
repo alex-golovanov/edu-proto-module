@@ -126,7 +126,7 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
         {renderLevels()}
       </div>
       <div className="module-graph__canvas-container">
-        <canvas ref={canvasRef} width="1500" height={242} id="module-graph__canvas"></canvas>
+        <canvas ref={canvasRef} width="1500" height="242" id="module-graph__canvas"></canvas>
       </div>
     </>
   )

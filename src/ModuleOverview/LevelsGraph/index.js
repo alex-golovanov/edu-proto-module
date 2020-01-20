@@ -92,7 +92,13 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
       if (key === currentLevel) {
         return (
           <CardStyled key={key} style={data.style} ref={data.ref}>
-            <img src={data.image} className="module-graph__level" alt="" />
+            {currentLevel === MODULE_KEYS.three ? (
+              <NavLink to="/module/overview/step-final">
+                <img src={data.image} className="module-graph__level" alt="" />
+              </NavLink>
+            ) : (
+              <img src={data.image} className="module-graph__level" alt="" />
+            )}
             <p className="module-graph__description">{data.description}</p>
             {currentLevel === MODULE_KEYS.four ? (
               <div className="module-graph__buttons module-graph__buttons--vertical">
@@ -110,31 +116,18 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
               </div>
             ) : (
               <div className="module-graph__buttons">
-                {data && data.to && data.to.module ? (
-                  <>
-                    <Button
-                      component={NavLink}
-                      to={data.to.module}
-                      className={classes.buttonLeft}
-                      appearance="primary"
-                      startIcon={<PlayArrowIcon />}
-                    >
-                      Начать
-                    </Button>
-                    <IconButton>
-                      <ListIcon />
-                    </IconButton>
-                  </>
-                ) : (
-                  <>
-                    <Button className={classes.buttonLeft} appearance="primary" startIcon={<PlayArrowIcon />}>
-                      Начать
-                    </Button>
-                    <IconButton>
-                      <ListIcon />
-                    </IconButton>
-                  </>
-                )}
+                <Button
+                  component={NavLink}
+                  to={data.to.graph}
+                  className={classes.buttonLeft}
+                  appearance="primary"
+                  startIcon={<PlayArrowIcon />}
+                >
+                  Начать
+                </Button>
+                <IconButton component={NavLink} to="/module/element/two">
+                  <ListIcon />
+                </IconButton>
               </div>
             )}
           </CardStyled>
@@ -154,13 +147,9 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
               <LockIconSmallStyled />
             </div>
           )}
-          {data && data.to && data.to.graph ? (
-            <NavLink to={data.to.graph}>
-              <img src={levelAchieved ? data.imageFilled : data.image} className="module-graph__level" alt="" />
-            </NavLink>
-          ) : (
+          <NavLink to={data.to.graph}>
             <img src={levelAchieved ? data.imageFilled : data.image} className="module-graph__level" alt="" />
-          )}
+          </NavLink>
         </div>
       )
     })
@@ -179,7 +168,12 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
           <p className="reflection-card__text">
             Ты достиг целевого уровня в этом модуле. Расскажи о своих впечатлениях.
           </p>
-          <Button startIcon={<EmojiObjectsOutlinedIcon fontSize="large" />} appearance="primary">
+          <Button
+            component={NavLink}
+            to="/module/reflection/1"
+            startIcon={<EmojiObjectsOutlinedIcon fontSize="large" />}
+            appearance="primary"
+          >
             Рассказать
           </Button>
         </ReflectionCardStyled>

@@ -14,6 +14,18 @@ export const CardStyled = withStyles({
   })
 })(Card)
 
+export const ReflectionCardStyled = withStyles({
+  root: {
+    height: 80,
+    width: 533,
+    padding: '16px 24px',
+    position: 'fixed',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    bottom: 16
+  }
+})(Card)
+
 export const LockIconSmallStyled = withStyles({
   root: {
     color: 'rgba(0, 0, 0, 0.54)',

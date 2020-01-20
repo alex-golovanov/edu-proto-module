@@ -1,0 +1,19 @@
+.slider__control {
+  position: fixed;
+  right: 100px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(21, 0, 51, 0.11), 0 3px 6px rgba(21, 0, 51, 0.08);
+  border-radius: 40px;
+  top: 50vh;
+  transform: translateY(-50%);
+
+  &--left {
+    right: initial;
+    left: 100px;
+  }
+}

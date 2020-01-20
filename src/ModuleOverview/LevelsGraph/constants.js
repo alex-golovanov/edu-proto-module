@@ -12,6 +12,13 @@ export const MODULE_ROUTES = {
   [MODULE_KEYS.fourFinal]: '/module/overview/step-final'
 }
 
+export const MODULE_ROUTES_ELEMENTS = {
+  [MODULE_KEYS.two]: '/module/element/two',
+  [MODULE_KEYS.three]: '/module/element/three',
+  [MODULE_KEYS.four]: '/module/element/four',
+  [MODULE_KEYS.fourFinal]: '/module/overview/step-final'
+}
+
 export const MODULE_ROUTES_INVERSED = {
   [MODULE_ROUTES[MODULE_KEYS.two]]: MODULE_KEYS.two,
   [MODULE_ROUTES[MODULE_KEYS.three]]: MODULE_KEYS.three,

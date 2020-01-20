@@ -1,148 +1,96 @@
-.content-container {
-  width: 656px;
-  height: 948px;
-  padding: 20px 24px;
-}
-
-.image-container {
-    position: relative;
-  width: 68px;
-  margin: 0 auto;
-}
-
-.image {
-  &__circle {
+.module-element {
+  &__content {
     position: absolute;
-    top: -4px;
-    left: -4px;
-  }
-  &__main {
-    margin: 0 auto;
-  }
-}
-
-.main-header {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  margin: 15px auto 32px auto;
-  text-align: center;
-}
-
-.task-card {
-  background: #FFEACC;
-  border-radius: 8px;
-  width: 616px;
-  height: 182px;
-  flex-direction: row;
-  padding: 20px;
-
-  &__header {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 8px;
+    width: 656px;
+    height: 210px;
+    top: 0;
+    left: 0;
+    padding: 25px;
   }
 
-  &__text {
+  &__description {
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
+    text-align: center;
+    color: #212122;
     margin-bottom: 16px;
   }
 
-  &__button {
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
-}
-
-.stages {
-  margin-top: 32px;
-  &__divider {
-    position: relative;
-    display: block;
-    font-size: 13px;
-    line-height: 16px;
+  &__warning {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
     text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #757575;
-    margin-bottom: 8px;
-    &:after {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 43%;
-      background-color: #DADEE7;
-      right: 3%;
-      bottom: 7px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 43%;
-      background-color: #DADEE7;
-      left: 3%;
-      bottom: 7px;
-    }
+    color: #E59900;
+    margin-bottom: 16px;
   }
-  &__check {
-    &:after {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 37%;
-      background-color: #DADEE7;
-      right: 3%;
-      bottom: 7px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 37%;
-      background-color: #DADEE7;
-      left: 3%;
-      bottom: 7px;
-    }
-  }
-  &__container {
-    display: flex;
-    align-items: flex-start;
-  }
-}
 
-
-.stage-card {
-  background: #FFFFFE;
-  border: 1px solid #DADEE7;
-  box-sizing: border-box;
-  box-shadow: 0 1px 2px rgba(21, 0, 51, 0.1), 0 1px 3px rgba(21, 0, 51, 0.05);
-  border-radius: 8px;
-  padding: 12px 12px 0 12px;
-  width: 200px;
-  margin-right: 8px;
-  margin-bottom: 39px;
-  button {
-    &:not(:hover) {
-      svg {
-        fill: #6200EE;
-      }
-    }
+  &__recommended {
+    width: 656px;
+    height: 210px;
+    padding: 36px 24px 24px;
+    transform: translateX(-25px) translateY(-25px);
+    background: #F1F2F6;
+    border-radius: 16px;
+    position: relative;
   }
-  &__text {
+
+  &__recommended-header {
+    font-style: normal;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #212122;
+    margin-bottom: 20px;
   }
-  &__variant {
-    margin-top: 8px;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.2px;
-    color: #757575;
+
+  &__recommended-list {
+    list-style: none;
+    margin: 0;
+  }
+
+  &__recommended-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212122;
+    position: relative;
+    margin-bottom: 12px;
+    width: 366px;
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      left: -30px;
+      bottom: 50%;
+      border-radius: 50%;
+      transform: translateY(50%);
+      background-color: #DADADA;
+    }
+  }
+
+  &__recommended-item-required-text {
+      position: absolute;
+      left: 56px;
+      bottom: 55px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      color: #E59900;
+  }
+
+  &__recommended-item-required-image {
+    position: absolute;
+    right: 52px;
+    top: 75px;
   }
 }

@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { makeStyles } from '@material-ui/styles'
 
-import TaskContainer from '../shared/TaskContainer'
+import ModalContainer from '../shared/ModalContainer'
 import videoTaskImage from './assets/video-task.png'
 
 const useStyles = makeStyles({
@@ -22,9 +22,9 @@ export default memo(function TaskVideo() {
   const classes = useStyles()
 
   return (
-    <TaskContainer>
+    <ModalContainer>
       <div className={classes.clearfix} />
       <img src={videoTaskImage} className={classes.image} />
-    </TaskContainer>
+    </ModalContainer>
   )
 })

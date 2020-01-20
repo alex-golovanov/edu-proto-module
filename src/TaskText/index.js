@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { makeStyles } from '@material-ui/core'
 
-import TaskContainer from '../shared/TaskContainer'
+import ModalContainer from '../shared/ModalContainer'
 import textTaskImage from './assets/text-task.png'
 
 const useStyles = makeStyles({
@@ -21,9 +21,9 @@ export default memo(function TaskText() {
   const classes = useStyles()
 
   return (
-    <TaskContainer scrollable>
+    <ModalContainer scrollable>
       <div className={classes.clearfix} />
       <img className={classes.image} src={textTaskImage} />
-    </TaskContainer>
+    </ModalContainer>
   )
 })

@@ -1,0 +1,28 @@
+.info-card {
+  background: #FFEACC;
+  border-radius: 8px;
+  width: 616px;
+  height: 182px;
+  flex-direction: row;
+  padding: 20px;
+
+  &__header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

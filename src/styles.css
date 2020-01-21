@@ -42,3 +42,9 @@ p {
   border-radius: 10px;
   align-self: center;
 }
+
+.overlay-tasks {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FAFBFC;
+}

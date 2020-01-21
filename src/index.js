@@ -1,16 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Module from './Module'
-import Reflection from './Reflection'
-import ModuleElementLevelTwo from './ModuleElement/ModuleElementLevelTwo'
-import ModuleElement from './ModuleElement'
-import ModuleOverview from './ModuleOverview'
-import TaskText from './TaskText'
-import TaskVideo from './TaskVideo'
-
-import SlidesExample from './SlidesExample'
+import ModuleRoutes from './Module.routes'
+import TaskStepsRoutes from './TaskSteps.routes'
 
 import './normalize.css'
 import './styles.css'
@@ -19,21 +12,13 @@ const App = () => (
   <Router>
     <div className="app">
       <div className="container">
-        <div className="overlay" />
-        <div className="viewport">
-          <Switch>
-            <Route exact path="/module" component={Module} />
-            <Route path="/module/overview" component={ModuleOverview} />
-            <Route path="/module/task/video" component={TaskVideo} />
-            <Route path="/module/task/text" component={TaskText} />
-            <Route exact path="/module/element/two" component={ModuleElementLevelTwo} />
-            <Route exact path="/module/element/two-done" component={ModuleElementLevelTwo} />
-            <Route path="/module/element/:level?" component={ModuleElement} />
-            <Route path="/module/reflection" component={Reflection} />
-            <Route path="/slides/:taskId?/:meta?" component={SlidesExample} />
-            <Redirect to="/module" />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/tasks" component={TaskStepsRoutes} />
+          <div className="viewport">
+            <div className="overlay" />
+            <ModuleRoutes />
+          </div>
+        </Switch>
       </div>
     </div>
   </Router>

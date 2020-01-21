@@ -1,13 +1,13 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import Module from './Module'
-import ModuleOverview from './ModuleOverview'
-import TaskVideo from './TaskVideo'
-import TaskText from './TaskText'
-import ModuleElementLevelTwo from './ModuleElement/ModuleElementLevelTwo'
-import ModuleElement from './ModuleElement'
-import Reflection from './Reflection'
-import SlidesExample from './SlidesExample'
+import Module from '../Module'
+import ModuleOverview from '../ModuleOverview'
+import TaskVideo from '../TaskVideo'
+import TaskText from '../TaskText'
+import ModuleElementLevelTwo from '../ModuleElement/ModuleElementLevelTwo'
+import ModuleElement from '../ModuleElement'
+import Reflection from '../Reflection'
+import SlidesExample from '../SlidesExample'
 
 export default function ModuleRoutes() {
   return (

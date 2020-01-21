@@ -1,0 +1,29 @@
+.task-steps__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.task-steps__scroll-container {
+  display: flex;
+  margin-top: 90px;
+  height: 100%;
+}
+
+.task-steps__item-container {
+  margin-left: calc(100vw / 12);
+  transition: all 0.3s;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding-bottom: 200px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

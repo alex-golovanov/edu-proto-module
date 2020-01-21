@@ -25,16 +25,16 @@ export function StageCard({ cardTitle, variant, done }) {
     <div className={`stage-card ${done ? 'stage-card__done' : 'stage-card__progress'}`}>
       <p className="stage-card__text">{cardTitle}</p>
       {variant && <p className="stage-card__variant">{variant}</p>}
-      {done ?
+      {done ? (
         <div className="stage-done-mark">
           <Check fontSize="large" />
           Выполнено
         </div>
-        :
+      ) : (
         <CardBtn appearance="ghost" startIcon={<PlayArrow fontSize="inherit" />}>
-        Начать
-      </CardBtn>
-      }
+          Начать
+        </CardBtn>
+      )}
     </div>
   )
 }

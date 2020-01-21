@@ -1,5 +1,32 @@
-.overlay-tasks {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #FAFBFC;
+.info-wrapper {
+  margin: 24px auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.task-one {
+  width: 864px;
+  height: 924px;
+  margin: 0 auto;
+  display: block;
+}
+
+.task-block {
+  position: relative;
+  width: 864px;
+  margin: 0 auto;
+  &__default {
+    height: 924px;
+  }
+  &__choose {
+    height: 1174px;
+  }
+}
+
+.response {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 854px;
 }

@@ -11,15 +11,15 @@ import './styles.css'
 const App = () => (
   <Router>
     <div className="app">
-      <div className="container">
-        <Switch>
-          <Route path="/tasks" component={TaskStepsRoutes} />
+      <Switch>
+        <Route path="/tasks" component={TaskStepsRoutes} />
+        <div className="container">
           <div className="viewport">
             <div className="overlay" />
             <ModuleRoutes />
           </div>
-        </Switch>
-      </div>
+        </div>
+      </Switch>
     </div>
   </Router>
 )

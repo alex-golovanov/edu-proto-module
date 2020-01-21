@@ -1,10 +1,10 @@
-import React, { createContext, memo, useCallback, useRef, useState } from 'react'
+import React, { createContext, memo, useCallback, useState } from 'react'
 
 import './styles.scss'
 
 export const SliderContext = createContext({ toggleSlide: null })
 
-export default function SecondStep({ slides, width = 864 }) {
+export default memo(function SecondStep({ slides, width = 864 }) {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const toggleSlide = useCallback(() => setActiveSlideIndex(activeSlideIndex === 0 ? 1 : 0), [activeSlideIndex])
 
@@ -16,10 +16,11 @@ export default function SecondStep({ slides, width = 864 }) {
             <div
               key={i}
               className={`task-steps__item-container ${
-                activeSlideIndex === 1 ? 'task-steps__item-container--moved' : ''
+                activeSlideIndex === 1 ? 'task-steps__item-container--moved' : ``
               }`}
               style={{
-                transform: activeSlideIndex === 1 && `translateX(calc(-${width}px - calc(100vw / 12)))`
+                transform: activeSlideIndex === 1 && `translateX(calc(-${width}px - calc(100vw / 12)))`,
+                pointerEvents: activeSlideIndex !== i && `none`
               }}
             >
               {item}
@@ -29,4 +30,4 @@ export default function SecondStep({ slides, width = 864 }) {
       </div>
     </SliderContext.Provider>
   )
-}
+})

@@ -85,7 +85,6 @@ export const levelTwoStagesData = {
   ]
 }
 
-
 export const levelTwoStagesDataDone = {
   stage: [
     {

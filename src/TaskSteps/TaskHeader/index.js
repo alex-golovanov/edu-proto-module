@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function TaskHeader() {
+export default function TaskHeader({ step }) {
   const classes = useStyles()
 
   return (
@@ -29,7 +29,7 @@ export default function TaskHeader() {
         <IconButton disableRipple className={classes.backBtn}>
           <Close />
         </IconButton>
-        <h1 className="task-header__step">I шаг</h1>
+        <h1 className="task-header__step">{step === '1' ? 'I' : 'II'} шаг</h1>
         <div className="task-header__chat">
           <ChatIcon className={classes.chatIcon} />
           <span className="task-header__chat-number">12</span>

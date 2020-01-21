@@ -7,7 +7,6 @@ import TaskText from '../TaskText'
 import ModuleElementLevelTwo from '../ModuleElement/ModuleElementLevelTwo'
 import ModuleElement from '../ModuleElement'
 import Reflection from '../Reflection'
-import SlidesExample from '../SlidesExample'
 
 export default function ModuleRoutes() {
   return (
@@ -20,7 +19,6 @@ export default function ModuleRoutes() {
       <Route exact path="/module/element/two-done" component={ModuleElementLevelTwo} />
       <Route path="/module/element/:level?" component={ModuleElement} />
       <Route path="/module/reflection" component={Reflection} />
-      <Route path="/slides/:taskId?/:meta?" component={SlidesExample} />
       <Redirect to="/module" />
     </Switch>
   )

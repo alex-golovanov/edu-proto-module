@@ -31,19 +31,12 @@ export default function TaskHeader({ step }) {
     <div className="task-header">
       <span className="sub-header">История • Эпоха Возрождения • 2.0</span>
       <div className="task-header__main">
-<<<<<<< HEAD
-        <IconButton disableRipple className={classes.backBtn}>
-          <Close />
-        </IconButton>
-        <h1 className="task-header__step">{step === '1' ? 'I' : 'II'} шаг</h1>
-=======
         <NavLink to="/module/element/two">
           <IconButton disableRipple className={classes.backBtn}>
-            <ArrowBack className={classes.backIcon} />
+            <ArrowBack />
           </IconButton>
         </NavLink>
-        <h1 className="task-header__step">I шаг</h1>
->>>>>>> fix back button link
+        <h1 className="task-header__step">{step === '1' ? 'I' : 'II'} шаг</h1>
         <div className="task-header__chat">
           <ChatIcon className={classes.chatIcon} />
           <span className="task-header__chat-number">12</span>

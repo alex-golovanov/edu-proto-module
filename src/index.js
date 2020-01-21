@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import TaskSteps from './TaskSteps'
 import ModuleRoutes from './Module.routes'
+import TaskStepsRoutes from './TaskSteps.routes'
 
 import './normalize.css'
 import './styles.css'
@@ -13,7 +13,7 @@ const App = () => (
     <div className="app">
       <div className="container">
         <Switch>
-          <Route exact path="/tasks" component={TaskSteps} />
+          <Route path="/tasks" component={TaskStepsRoutes} />
           <div className="viewport">
             <div className="overlay" />
             <ModuleRoutes />

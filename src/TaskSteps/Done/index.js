@@ -24,7 +24,7 @@ export default function DoneWidget() {
       <img className="img-done" src={Done} alt="done widget" />
       <StyledButton className={classes.doneBtn} appearance="primary">
         <ArrowForward />
-        <span>Слудующий шаг</span>
+        <span>Следующий шаг</span>
       </StyledButton>
     </div>
   )

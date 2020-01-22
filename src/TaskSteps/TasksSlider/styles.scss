@@ -1,14 +1,14 @@
 .task-steps__container {
   position: fixed;
-  top: 0;
+  top: 90px;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
 .task-steps__scroll-container {
+  margin: 20px;
   display: flex;
-  margin-top: 90px;
   height: 100%;
 }
 

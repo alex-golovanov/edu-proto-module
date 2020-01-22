@@ -16,13 +16,13 @@ const useStyles = makeStyles({
     top: '31px'
   }
 })
-export default function DoneWidget() {
+export default function DoneWidget({ onClick }) {
   const classes = useStyles()
 
   return (
     <div className="done-container">
       <img className="img-done" src={Done} alt="done widget" />
-      <StyledButton className={classes.doneBtn} appearance="primary">
+      <StyledButton onClick={onClick} className={classes.doneBtn} appearance="primary">
         <ArrowForward />
         <span>Следующий шаг</span>
       </StyledButton>

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import Chevron from '@material-ui/icons/ChevronLeft'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
@@ -55,6 +56,12 @@ export default function FirstStepTwo() {
   const [choose, setChoice] = useState(false)
   const [check, setCheck] = useState(false)
 
+  const history = useHistory()
+
+  const onTaskDone = () => {
+    history.push('/tasks/2')
+  }
+
   const classes = useStyles()
   const { toggleSlide } = useContext(SliderContext)
 
@@ -63,7 +70,7 @@ export default function FirstStepTwo() {
       {check ? (
         <>
           <img src={TaskOneTwoDone} alt="task done" />
-          <DoneWidget />
+          <DoneWidget onClick={onTaskDone} />
         </>
       ) : choose ? (
         <>

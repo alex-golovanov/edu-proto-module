@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send'
 import Chevron from '@material-ui/icons/ChevronLeft'
@@ -55,6 +56,12 @@ function FirstStep() {
   const [choose, setChoice] = useState(false)
   const [checkTask, setCheck] = useState(false)
 
+  const history = useHistory()
+
+  const onTaskDone = () => {
+    history.push('/tasks/2')
+  }
+
   const { toggleSlide } = useContext(SliderContext)
 
   const classes = useStyles()
@@ -63,7 +70,7 @@ function FirstStep() {
       {checkTask ? (
         <div className="task-block">
           <img src={TaskOneDone} alt="task done" />
-          <DoneWidget />
+          <DoneWidget onClick={onTaskDone} />
         </div>
       ) : (
         <>

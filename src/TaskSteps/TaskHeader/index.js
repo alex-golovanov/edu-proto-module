@@ -26,6 +26,11 @@ const useStyles = makeStyles({
 
 export default function TaskHeader({ step }) {
   const classes = useStyles()
+  const stepMap = {
+    '1': 'I',
+    '2': 'II',
+    '3': 'III'
+  }
 
   return (
     <div className="task-header">
@@ -36,7 +41,7 @@ export default function TaskHeader({ step }) {
             <ArrowBack />
           </IconButton>
         </NavLink>
-        <h1 className="task-header__step">{step === '1' ? 'I' : 'II'} шаг</h1>
+        <h1 className="task-header__step">{stepMap[step]} шаг</h1>
         <div className="task-header__chat">
           <ChatIcon className={classes.chatIcon} />
           <span className="task-header__chat-number">12</span>

@@ -6,12 +6,8 @@ export const useStyles = makeStyles({
   },
   widget: {
     position: 'absolute',
-    bottom: -110,
+    bottom: -120,
     left: 50
-  },
-  firstTaskStarted: {
-    width: 864,
-    height: 758
   },
   chooseTask: {
     position: 'absolute',
@@ -31,8 +27,15 @@ export const useStyles = makeStyles({
   },
   sendToCheck: {
     position: 'absolute',
-    bottom: 80,
-    left: 60
+    bottom: 90,
+    left: 65
+  },
+  returnBack: {},
+  returnBackContainer: {
+    position: 'absolute',
+    bottom: 140,
+    backgroundColor: '#f1f2f6',
+    right: 40
   },
   sendToCheckSecond: {
     position: 'absolute',
@@ -41,7 +44,10 @@ export const useStyles = makeStyles({
   },
   forward: {
     position: 'absolute',
-    bottom: -80,
+    bottom: -90,
     right: 47
+  },
+  forwardIcon: {
+    fontSize: 23
   }
 })

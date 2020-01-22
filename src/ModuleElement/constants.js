@@ -40,9 +40,11 @@ export const levelTwoStagesData = {
       check: false,
       cards: [
         {
+          to: '/tasks/1',
           cardTitle: 'Понятие Ренессанса'
         },
         {
+          to: '/tasks/1/2',
           cardTitle: 'Что такое Ренессанс'
         }
       ]
@@ -52,9 +54,11 @@ export const levelTwoStagesData = {
       check: false,
       cards: [
         {
+          to: '/tasks/2',
           cardTitle: 'Мировоззрение Ренессанса'
         },
         {
+          to: '/tasks/2/2',
           cardTitle: 'Человек эпохи Возрождения'
         }
       ]
@@ -64,6 +68,7 @@ export const levelTwoStagesData = {
       check: false,
       cards: [
         {
+          to: '/tasks/3',
           cardTitle: 'Выдающиеся деятели эпохи Возрождения'
         }
       ]
@@ -74,10 +79,12 @@ export const levelTwoStagesData = {
       cards: [
         {
           cardTitle: 'Эпоха Возрождения',
+          to: '/tasks/check',
           variant: 'Вариант I'
         },
         {
           cardTitle: 'Эпоха Возрождения',
+          to: '/tasks/check/2',
           variant: 'Вариант II'
         }
       ]

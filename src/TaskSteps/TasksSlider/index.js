@@ -6,6 +6,7 @@ export const SliderContext = createContext({ toggleSlide: null })
 
 export default memo(function SecondStep({ slides, width = 864 }) {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
+
   const toggleSlide = useCallback(() => setActiveSlideIndex(activeSlideIndex === 0 ? 1 : 0), [activeSlideIndex])
 
   return (

@@ -24,13 +24,15 @@ const useStyles = makeStyles({
   }
 })
 
+const stepsMap = {
+  '1': 'I шаг',
+  '2': 'II шаг',
+  '3': 'III шаг',
+  check: 'Проверочные'
+}
+
 export default function TaskHeader({ step }) {
   const classes = useStyles()
-  const stepMap = {
-    '1': 'I',
-    '2': 'II',
-    '3': 'III'
-  }
 
   return (
     <div className="task-header">
@@ -41,7 +43,7 @@ export default function TaskHeader({ step }) {
             <ArrowBack />
           </IconButton>
         </NavLink>
-        <h1 className="task-header__step">{stepMap[step]} шаг</h1>
+        <h1 className="task-header__step">{stepsMap[step]}</h1>
         <div className="task-header__chat">
           <ChatIcon className={classes.chatIcon} />
           <span className="task-header__chat-number">12</span>

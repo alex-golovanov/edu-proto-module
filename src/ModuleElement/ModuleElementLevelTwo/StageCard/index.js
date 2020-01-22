@@ -5,6 +5,7 @@ import PlayArrow from '@material-ui/icons/PlayArrow'
 import Check from '@material-ui/icons/Check'
 import { withStyles } from '@material-ui/styles'
 import Button from '../../../shared/Button'
+import { NavLink } from 'react-router-dom'
 
 const CardBtn = withStyles({
   root: {
@@ -20,7 +21,7 @@ const CardBtn = withStyles({
   }
 })(Button)
 
-export function StageCard({ cardTitle, variant, done }) {
+export function StageCard({ cardTitle, variant, done, to }) {
   return (
     <div className={`stage-card ${done ? 'stage-card__done' : 'stage-card__progress'}`}>
       <p className="stage-card__text">{cardTitle}</p>
@@ -31,7 +32,7 @@ export function StageCard({ cardTitle, variant, done }) {
           Выполнено
         </div>
       ) : (
-        <CardBtn appearance="ghost" startIcon={<PlayArrow fontSize="inherit" />}>
+        <CardBtn component={NavLink} to={to} appearance="ghost" startIcon={<PlayArrow fontSize="inherit" />}>
           Начать
         </CardBtn>
       )}

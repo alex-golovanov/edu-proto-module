@@ -43,9 +43,9 @@ export default memo(function ModuleElementLevelTwo() {
                 <>
                   <span className={`stages__divider ${check && 'stages__check'}`}>{title}</span>
                   <div className="stages__container">
-                    {cards.map(({ cardTitle, variant = false, done = false }) => {
-                      return <StageCard cardTitle={cardTitle} variant={variant} done={done} />
-                    })}
+                    {cards.map(({ cardTitle, variant = false, done = false, to }) => (
+                      <StageCard cardTitle={cardTitle} to={to} variant={variant} done={done} />
+                    ))}
                   </div>
                 </>
               )

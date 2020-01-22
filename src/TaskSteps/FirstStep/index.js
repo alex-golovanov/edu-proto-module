@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useContext, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send'
 import Chevron from '@material-ui/icons/ChevronLeft'
@@ -63,6 +63,13 @@ function FirstStep() {
   }
 
   const { toggleSlide } = useContext(SliderContext)
+
+  const { stage } = useParams()
+  useEffect(() => {
+    if (stage) {
+      toggleSlide()
+    }
+  }, [])
 
   const classes = useStyles()
   return (

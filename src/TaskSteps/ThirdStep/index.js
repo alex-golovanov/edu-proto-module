@@ -55,7 +55,7 @@ export default function ThirdStep() {
   const history = useHistory()
 
   const onTaskDone = () => {
-    history.push('/tasks/2')
+    history.push('/tasks/check')
   }
 
   const classes = useStyles()

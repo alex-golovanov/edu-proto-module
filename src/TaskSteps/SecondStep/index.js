@@ -33,7 +33,7 @@ const FirstItem = () => {
         <img className={classes.widget} src={widgetDone} alt="" />
         <Button
           component={NavLink}
-          to="/module"
+          to="/tasks/3"
           className={classes.forward}
           appearance="primary"
           startIcon={<ArrowForwardIcon />}

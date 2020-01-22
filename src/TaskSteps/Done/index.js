@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     width: '179px',
     height: '48px',
     padding: '9px 0px',
-    right: '52px',
+    right: '59px',
     top: '31px'
   }
 })

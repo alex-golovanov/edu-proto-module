@@ -1,6 +1,7 @@
-import React, { memo, useCallback, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { memo, useCallback, useMemo, useState } from 'react'
+import { useHistory, useLocation } from 'react-router-dom'
 
+import { reflectionImages } from '../constants'
 import navStage2 from '../assets/nav-stage-2.png'
 import levelImage from '../../shared/assets/level-3-filled.svg'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIosOutlined'
@@ -33,7 +34,13 @@ const inputs = [
 
 export default memo(function StageTwo() {
   let history = useHistory()
+  const location = useLocation()
   const [answerIndex, setAnswerIndex] = useState(null)
+
+  const firstStageResult = useMemo(() => {
+    const [_, result] = location.search.split('=')
+    return result
+  }, [location])
 
   const onChange = useCallback(e => {
     const index = inputs.findIndex(item => item.id === e.target.id)
@@ -43,8 +50,8 @@ export default memo(function StageTwo() {
   const onNavigate = useCallback(() => {
     if (answerIndex === null) return
 
-    history.push(inputs[answerIndex].to)
-  }, [history, answerIndex])
+    history.push(`${inputs[answerIndex].to}?result=${firstStageResult}`)
+  }, [history, answerIndex, firstStageResult])
 
   return (
     <CardStageTwoStyled>
@@ -70,6 +77,9 @@ export default memo(function StageTwo() {
         </ul>
       </div>
       <div className="reflection__navigation">
+        <div className="reflection__first-stage-result-image-container">
+          <img src={reflectionImages[firstStageResult]} alt="" className="reflection__first-stage-result-image" />
+        </div>
         <img src={navStage2} className="reflection__navigation-image" alt="" />
         <Button onClick={onNavigate} appearance="primary" endIcon={<ArrowForwardIcon />}>
           Последний вопрос

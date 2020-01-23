@@ -41,7 +41,7 @@ const FirstItem = () => {
         <img className={classes.widget} src={widgetDone} alt="" />
         <Button
           component={NavLink}
-          to="/tasks/1"
+          to="/module/overview/step-final"
           className={classes.forward}
           appearance="primary"
           startIcon={<LevelUpIcon className={classes.forwardIcon} />}
@@ -103,7 +103,7 @@ const SecondItem = () => {
         <img className={classes.widget} alt="" src={widgetDone} />
         <Button
           component={NavLink}
-          to="/tasks/2"
+          to="/module/overview/step-final"
           className={classes.forward}
           appearance="primary"
           startIcon={<LevelUpIcon className={classes.forwardIcon} />}

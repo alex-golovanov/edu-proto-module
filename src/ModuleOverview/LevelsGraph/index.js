@@ -125,9 +125,15 @@ export default memo(function LevelsGraph({ currentLevel = MODULE_KEYS.two }) {
                 >
                   Начать
                 </Button>
-                <IconButton component={NavLink} to="/module/element/two">
-                  <ListIcon />
-                </IconButton>
+                {currentLevel === MODULE_KEYS.three ? (
+                  <IconButton>
+                    <ListIcon />
+                  </IconButton>
+                ) : (
+                  <IconButton component={NavLink} to="/module/element/two">
+                    <ListIcon />
+                  </IconButton>
+                )}
               </div>
             )}
           </CardStyled>

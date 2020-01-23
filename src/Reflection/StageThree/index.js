@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState, useMemo } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useHistory, useLocation } from 'react-router-dom'
 import CheckOutlinedIcon from '@material-ui/icons/CheckOutlined'
 
 import { CardStageThreeStyled } from '../materialStyles'
@@ -8,6 +8,7 @@ import levelImage from '../../shared/assets/level-3-filled.svg'
 import RadioButton from '../../shared/RadioButton'
 import navStage2 from '../assets/nav-stage-2.png'
 import Button from '../../shared/Button'
+import { reflectionImages } from '../constants'
 
 const stagesData = {
   understood: {
@@ -40,10 +41,16 @@ const getStage = resultName => stagesData[resultName] || stagesData[0]
 
 export default memo(function StageThree() {
   let history = useHistory()
+  const location = useLocation()
   const [answerIndex, setAnswerIndex] = useState(null)
   const { result } = useParams()
 
   const stage = useMemo(() => getStage(result), [result])
+
+  const firstStageResult = useMemo(() => {
+    const [_, result] = location.search.split('=')
+    return result
+  }, [location])
 
   const onChange = useCallback(
     e => {
@@ -54,8 +61,10 @@ export default memo(function StageThree() {
   )
 
   const onNavigate = useCallback(() => {
-    history.push(stage.to)
-  }, [history, stage.to])
+    if (answerIndex === null) return
+
+    history.push(`${stage.to}?result=${result}`)
+  }, [history, stage.to, answerIndex, result])
 
   return (
     <CardStageThreeStyled>
@@ -81,6 +90,9 @@ export default memo(function StageThree() {
         </ul>
       </div>
       <div className="reflection__navigation">
+        <div className="reflection__first-stage-result-image-container">
+          <img src={reflectionImages[firstStageResult]} alt="" className="reflection__first-stage-result-image" />
+        </div>
         <img src={navStage2} className="reflection__navigation-image" alt="" />
         <Button onClick={onNavigate} appearance="primary" startIcon={<CheckOutlinedIcon />}>
           Завершить
